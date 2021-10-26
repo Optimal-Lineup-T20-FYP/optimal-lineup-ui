@@ -3,6 +3,7 @@ import { Route } from "react-router-dom";
 import { withRouter } from "react-router-dom";
 
 import Home from "./views/Homepage";
+import PlayerStats from "./views/PlayerStats";
 // import Abstract from "./views/Abstract";
 // import HowToDonate from "./views/HowToDonate";
 // import Dashboard from "./views/Dashboard";
@@ -24,6 +25,7 @@ import Home from "./views/Homepage";
 // import Login from "./views/Login";
 
 export const HomeRoute = "/";
+export const PlayerStatsRoute = "/playerstats";
 // export const AbstractRoute = "/abstract/";
 // export const HowToDonateRoute = "/howtodonate/";
 // export const DashboardRoute = "/dashboard/";
@@ -48,6 +50,7 @@ function Routing() {
   return (
     <React.Fragment>
       <Route path={HomeRoute} exact component={Home} />
+      <Route path={PlayerStatsRoute} exact component={PlayerStats} />
       {/* <Route path={AbstractRoute} component={Abstract} />
       <Route path={HowToDonateRoute} component={HowToDonate} />
       <Route path={DashboardRoute} component={Dashboard} />

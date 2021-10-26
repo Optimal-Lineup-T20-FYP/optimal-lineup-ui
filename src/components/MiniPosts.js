@@ -27,7 +27,7 @@ export default function Abstract(props) {
   const { post } = props;
 
   return (
-    <Grid item xs={12} md={5}>
+    <Grid item xs={12} md={6}>
       <CardActionArea component="a" href={post.ref}>
         <Card className={classes.card}>
           <div className={classes.cardDetails}>
@@ -49,7 +49,8 @@ export default function Abstract(props) {
           <Hidden xsDown>
             <CardMedia
               className={classes.cardMedia}
-              image={post.image}
+              component="img"
+              src={post.image}
               title={post.imageTitle}
             />
           </Hidden>

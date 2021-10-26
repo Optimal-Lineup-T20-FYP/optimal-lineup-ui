@@ -5,16 +5,22 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 import "./App.css";
 import Routing from "./Routing.js";
+import Header from "./components/Header";
 import Footer from "./components/Footer";
 
 const history = createBrowserHistory();
-const theme = createTheme();
+const theme = createTheme({
+  palette: {
+    mode: "dark",
+  },
+});
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" style={{ height: "100%", width: "100%" }}>
       <ThemeProvider theme={theme}>
-        <div style={{ marginBottom: 100 }}>
+        <div style={{ height: "calc(100% - 100px)", marginBottom: 100 }}>
+          <Header />
           <Router history={history}>
             <Routing />
           </Router>
