@@ -19,16 +19,20 @@ function App() {
   return (
     <div className="App" style={{ height: "100%", width: "100%" }}>
       <ThemeProvider theme={theme}>
-        <div style={{ height: "calc(100% - 100px)", paddingBottom: 100 }}>
-          <Header />
+        <div
+          style={{
+            display: "flex",
+            alignItems: "stretch",
+            paddingBottom: 60,
+            flexDirection: "column",
+          }}
+        >
           <Router history={history}>
+            <Header history={history} />
             <Routing />
           </Router>
         </div>
-        <Footer
-          title="The Database Alchemists"
-          description="Developed by the students of Amrita Vishwa Vidyapeetham"
-        />
+        <Footer description="Developed by the students of Amrita Vishwa Vidyapeetham" />
       </ThemeProvider>
     </div>
   );

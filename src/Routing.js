@@ -25,7 +25,7 @@ import PlayerStats from "./views/PlayerStats";
 // import Login from "./views/Login";
 
 export const HomeRoute = "/";
-export const PlayerStatsRoute = "/playerstats";
+export const PlayerStatsRoute = "/playerstats/:name";
 // export const AbstractRoute = "/abstract/";
 // export const HowToDonateRoute = "/howtodonate/";
 // export const DashboardRoute = "/dashboard/";
@@ -50,7 +50,12 @@ function Routing() {
   return (
     <React.Fragment>
       <Route path={HomeRoute} exact component={Home} />
-      <Route path={PlayerStatsRoute} exact component={PlayerStats} />
+      <Route
+        path={PlayerStatsRoute}
+        render={(props) => (
+          <PlayerStats key={props.match.params.name} {...props} />
+        )}
+      />
       {/* <Route path={AbstractRoute} component={Abstract} />
       <Route path={HowToDonateRoute} component={HowToDonate} />
       <Route path={DashboardRoute} component={Dashboard} />
