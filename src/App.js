@@ -19,7 +19,7 @@ function App() {
   return (
     <div className="App" style={{ height: "100%", width: "100%" }}>
       <ThemeProvider theme={theme}>
-        <div style={{ height: "calc(100% - 100px)", marginBottom: 100 }}>
+        <div style={{ height: "calc(100% - 100px)", paddingBottom: 100 }}>
           <Header />
           <Router history={history}>
             <Routing />

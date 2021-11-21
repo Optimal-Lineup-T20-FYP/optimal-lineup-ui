@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "resolutions": {
-    "immer": "9.0.6"
+    "immer": "9.0.6",
+    "glob-parent": "5.1.2"
   },
   "dependencies": {
     "@emotion/react": "^11.5.0",
